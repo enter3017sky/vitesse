@@ -6,6 +6,8 @@ const router = useRouter()
 const user = useUserStore()
 const { t } = useI18n()
 
+console.log(' router ', router)
+
 watchEffect(() => {
   user.setNewName(props.name)
 })

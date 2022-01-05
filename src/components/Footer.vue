@@ -11,7 +11,20 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav class="text-xl mt-6">
+  <nav
+    border="2 dashed blue-200"
+    class="text-xl m-6"
+  >
+    <button
+      bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+      text="sm white"
+      font="mono light"
+      m="3"
+      p="y-2 x-4"
+      border="2 rounded blue-200"
+    >
+      Button
+    </button>
     <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
       <carbon-campsite />
     </router-link>
@@ -21,7 +34,9 @@ const toggleLocales = () => {
       <carbon-sun v-else />
     </button>
 
-    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
+    <a
+      class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales"
+    >
       <carbon-language />
     </a>
 
@@ -32,5 +47,9 @@ const toggleLocales = () => {
     <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
       <carbon-logo-github />
     </a>
+
+    <router-link class="icon-btn mx-2" to="/test" :title="t('button.about')">
+      <carbon-logo-github />
+    </router-link>
   </nav>
 </template>
